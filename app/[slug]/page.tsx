@@ -1,6 +1,6 @@
 import { AiOutlineHeart } from "react-icons/ai";
 import { BiShoppingBag } from "react-icons/bi";
-import ReactImageGallery from "react-image-gallery";
+// import ReactImageGallery from "react-image-gallery";
 import Rater from "react-rater";
 import Image from "next/image";
 

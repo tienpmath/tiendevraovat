@@ -53,7 +53,7 @@ export default function RootLayout({
                 <div className="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
                   <button
                     type="button"
-                    class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
+                    className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
                   >
                     <svg
                       className="w-5 h-5 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
