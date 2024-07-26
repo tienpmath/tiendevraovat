@@ -1,27 +1,19 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Mua bán Rao vặt Đà Lạt, Bảo Lộc, Lâm Đồng",
+  description: "Mua bán Rao vặt Đà Lạt, Bảo Lộc, Lâm Đồng",
   navItems: [
     {
       label: "Home",
       href: "/",
     },
     {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
       label: "Blog",
       href: "/blog",
     },
     {
-      label: "About",
+      label: "Giới thiệu",
       href: "/about",
     },
   ],
@@ -60,10 +52,10 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    github: "#",
+    twitter: "#",
+    docs: "#",
+    discord: "#",
+    sponsor: "https://ictdalat.vn",
   },
 };

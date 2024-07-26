@@ -14,7 +14,7 @@ import { Input } from "@nextui-org/input";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
-
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
@@ -53,8 +53,16 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">ACME</p>
+            <Image
+              src="favicon.svg"
+              alt="Rao Vặt Lâm Đồng"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "100%", height: "auto" }} // optional
+            />
+            <p></p> <p></p> <p></p> <p></p>
+            <p className="font-bold text-inherit"> Rao Vặt Lâm Đồng</p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
@@ -63,7 +71,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  "data-[active=true]:text-primary data-[active=true]:font-medium"
                 )}
                 color="foreground"
                 href={item.href}
@@ -79,7 +87,7 @@ export const Navbar = () => {
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2">
+        {/* <NavbarItem className="hidden sm:flex gap-2">
           <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
             <TwitterIcon className="text-default-500" />
           </Link>
@@ -90,7 +98,7 @@ export const Navbar = () => {
             <GithubIcon className="text-default-500" />
           </Link>
           <ThemeSwitch />
-        </NavbarItem>
+        </NavbarItem> */}
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden md:flex">
           <Button
@@ -101,7 +109,7 @@ export const Navbar = () => {
             startContent={<HeartFilledIcon className="text-danger" />}
             variant="flat"
           >
-            Sponsor
+            ICT Đà Lạt
           </Button>
         </NavbarItem>
       </NavbarContent>
