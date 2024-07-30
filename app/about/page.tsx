@@ -11,12 +11,7 @@ export default function AboutPage() {
       <hr />
       <Card className="max-w-[1024px]">
         <CardHeader className="flex gap-3">
-          <Image
-            height={40}
-            radius="sm"
-            src="/web2-1.jpg"
-            width={40}
-          />
+        
           <div className="flex flex-col">
             <p className="text-md">Rao vặt Lâm Đồng</p>
             <p className="text-small text-default-500">Rao vặt Lâm Đồng.vn</p>
