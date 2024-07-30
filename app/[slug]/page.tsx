@@ -38,11 +38,11 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   // read route params
-  const id = params.slug;
+  const slug = params.slug;
 
   // fetch data
   const product = await fetch(
-    `https://admin.raovatlamdong.vn/api/app/product/${id}`,
+    `https://admin.raovatlamdong.vn/api/app/product/product?slug=${slug}`,
     { next: { revalidate: 10000 } }
   ).then((res) => res.json());
 
@@ -65,12 +65,12 @@ export async function generateMetadata(
 }
 
 const ProductDetail = async (props: any) => {
-  // console.log(slug);
-  const id = props.params.slug;
-
+  //console.log(props);
+  const slug = props.params.slug;
+  //console(slug);
   //console.log(id);
   const res = await fetch(
-    `https://admin.raovatlamdong.vn/api/app/product/${id}`,
+    `https://admin.raovatlamdong.vn/api/app/product/product?slug=${slug}`,
     {
       method: "GET",
       next: { revalidate: 10000 },
@@ -110,7 +110,7 @@ const ProductDetail = async (props: any) => {
             <div className="data w-full lg:pr-8 pr-0 xl:justify-start justify-center flex items-center max-lg:pb-10 xl:my-2 lg:my-5 my-0">
               <div className="data w-full max-w-xl">
                 <p className="text-lg font-medium leading-8 text-indigo-600 mb-4">
-                  Clothing&nbsp; /&nbsp; Menswear
+                  Người bán: {data.seller}
                 </p>
                 <h2 className="font-manrope font-bold text-3xl leading-10 text-gray-900 mb-2 capitalize">
                   {data.name}
@@ -218,21 +218,22 @@ const ProductDetail = async (props: any) => {
                       </svg>
                     </div>
                     <span className="pl-2 font-normal leading-7 text-gray-500 text-sm ">
-                      1624 review
+                      {data.view} View
                     </span>
                   </div>
                 </div>
-                <p className="text-gray-500 text-base font-normal mb-5">
+                {/* <p className="text-gray-500 text-base font-normal mb-5">
                   {data.shortdescription}.{" "}
-                </p>
+                </p> */}
 
-                <p className="text-gray-900 text-lg leading-8 font-medium mb-4">
+                {/* <p className="text-gray-900 text-lg leading-8 font-medium mb-4">
                   Chi tiết
-                </p>
+                </p> */}
                 <div className="w-full pb-8 border-b border-gray-100 flex-wrap">
-                  <div className="grid grid-cols-3 min-[400px]:grid-cols-5 gap-3 max-w-md">
-                    {data.description}
-                  </div>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: data.shortDescription }}
+                  ></p>
+                  <p dangerouslySetInnerHTML={{ __html: data.description }}></p>
                 </div>
 
                 <div className="flex items-center gap-3">
