@@ -12,7 +12,6 @@ export default function AboutPage() {
       <Card className="max-w-[1024px]">
         <CardHeader className="flex gap-3">
           <Image
-            alt="nextui logo"
             height={40}
             radius="sm"
             src="/web2-1.jpg"
